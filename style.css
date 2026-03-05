@@ -1,0 +1,144 @@
+:root {
+    --bg-start: #f0f4ff;
+    --bg-end: #f8fbff;
+    --card-bg: #ffffff;
+    --text: #1f2937;
+    --muted: #6b7280;
+    --primary: #0f766e;
+    --primary-hover: #115e59;
+    --border: #dbe4f0;
+    --shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text);
+    background: linear-gradient(140deg, var(--bg-start), var(--bg-end));
+    padding: 24px;
+}
+
+.app-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.card {
+    background: var(--card-bg);
+    border-radius: 14px;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    padding: 22px;
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-size: 1.7rem;
+}
+
+.subtitle {
+    margin-top: 0;
+    color: var(--muted);
+}
+
+label {
+    display: block;
+    margin: 14px 0 8px;
+    font-weight: 600;
+}
+
+select,
+textarea,
+button {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    font-size: 0.95rem;
+}
+
+select,
+button {
+    padding: 10px 12px;
+}
+
+textarea {
+    min-height: 260px;
+    padding: 12px;
+    resize: vertical;
+    font-family: Consolas, "Courier New", monospace;
+    line-height: 1.4;
+}
+
+button {
+    margin-top: 14px;
+    border: none;
+    background: var(--primary);
+    color: #ffffff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+button:hover {
+    background: var(--primary-hover);
+}
+
+button:disabled {
+    background: #94a3b8;
+    cursor: not-allowed;
+}
+
+.status-message {
+    min-height: 24px;
+    margin-bottom: 0;
+    color: var(--muted);
+}
+
+.results-card h2 {
+    margin-top: 0;
+}
+
+.result-block {
+    border-top: 1px solid var(--border);
+    padding-top: 14px;
+    margin-top: 14px;
+}
+
+.result-block:first-of-type {
+    border-top: none;
+    padding-top: 0;
+    margin-top: 0;
+}
+
+.result-block h3 {
+    margin: 0 0 10px;
+    font-size: 1rem;
+}
+
+ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+#complexityResult p {
+    margin: 6px 0;
+}
+
+@media (max-width: 900px) {
+    .app-container {
+        grid-template-columns: 1fr;
+    }
+
+    textarea {
+        min-height: 220px;
+    }
+}

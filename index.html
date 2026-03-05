@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI-Powered Developer Assistant</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <main class="app-container">
+        <section class="card">
+            <h1>AI-Powered Developer Assistant</h1>
+            <p class="subtitle">Automated Code Analysis for Python, Java, and C++</p>
+
+            <label for="language">Programming Language</label>
+            <select id="language">
+                <option value="python">Python</option>
+                <option value="java">Java</option>
+                <option value="cpp">C++</option>
+            </select>
+
+            <label for="codeInput">Paste Your Code</label>
+            <textarea id="codeInput" placeholder="Paste your code here..."></textarea>
+
+            <button id="analyzeBtn">Analyze Code</button>
+            <p id="statusMessage" class="status-message"></p>
+        </section>
+
+        <section class="card results-card">
+            <h2>Analysis Results</h2>
+
+            <div class="result-block">
+                <h3>Error Detection</h3>
+                <p id="errorResult">No analysis yet.</p>
+            </div>
+
+            <div class="result-block">
+                <h3>Code Improvement Suggestions</h3>
+                <ul id="suggestionsResult"></ul>
+            </div>
+
+            <div class="result-block">
+                <h3>Complexity Analysis</h3>
+                <div id="complexityResult"></div>
+            </div>
+
+            <div class="result-block">
+                <h3>Auto Documentation</h3>
+                <p id="documentationResult"></p>
+            </div>
+
+            <div class="result-block">
+                <h3>Test Case Suggestions</h3>
+                <ul id="testCasesResult"></ul>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
