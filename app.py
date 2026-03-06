@@ -10,7 +10,7 @@ from analyzer import analyze_code
 
 # Base directories for backend and frontend.
 BASE_DIR = Path(__file__).resolve().parent
-FRONTEND_DIR = BASE_DIR.parent / "frontend"
+FRONTEND_DIR = str(BASE_DIR.parent / "frontend")
 DATABASE_PATH = BASE_DIR / "database.db"
 
 
@@ -100,5 +100,6 @@ def analyze():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
 
 
